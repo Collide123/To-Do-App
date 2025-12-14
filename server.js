@@ -5,7 +5,7 @@ const Todo = require('./todoModel'); // Import the Todo model
 const app = express();
 const PORT = 5000;
 // 🛑 IMPORTANT: REPLACE THIS WITH YOUR ACTUAL MONGODB CONNECTION STRING
-const MONGO_URI = 'mongodb+srv://anshivya20072005_db_user:EVeCV5wDlXsqeDDM@todoappcluster0.rsjzgq5.mongodb.net/?appName=ToDoAppCluster0'; 
+const MONGO_URI = 'cd "C:\Users\HP\to-do backend"'; 
 
 // --- Database Connection ---
 mongoose.connect(MONGO_URI)
