@@ -17,9 +17,9 @@ mongoose.connect(MONGO_URI)
 const allowedOrigin = 'https://to-do-frontend-ebon-plvercel.app'; 
 
 app.use(cors({
-    origin: allowedOrigin, // Allow only your Vercel URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    credentials: true // Crucial for some header types
+    allowedOrigin: ['https://to-do-frontend-ebon-plvercel.app', 'http://localhost:3000'], // Allowing both Vercel and localhost
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
 }));
 app.use(express.json());
 
