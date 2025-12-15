@@ -14,7 +14,10 @@ mongoose.connect(MONGO_URI)
 
 
 // --- Middleware ---
-app.use(cors());
+app.use(cors({
+    origin: '*', // This tells the browser to allow requests from ANY domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Ensure all necessary methods are allowed
+}));
 app.use(express.json());
 
 // --- API Endpoints (Using Mongoose) ---
