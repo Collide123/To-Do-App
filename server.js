@@ -14,10 +14,10 @@ mongoose.connect(MONGO_URI)
 
 
 // --- Middleware ---
-const allowedOrigin = 'https://to-do-frontend-ebon-plvercel.app'; 
+const allowedOrigin = 'https://to-do-frontend-xabv.vercel.app'; 
 
 app.use(cors({
-    allowedOrigin: ['https://to-do-frontend-ebon-plvercel.app', 'http://localhost:3000'], // Allowing both Vercel and localhost
+    allowedOrigin: ['https://to-do-frontend-xabv.vercel.app', 'http://localhost:3000'], // Allowing both Vercel and localhost
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
@@ -87,5 +87,5 @@ app.delete('/api/todos/:id', async (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on https://to-do-frontend-xabv.vercel.app`);
 });
